@@ -1,9 +1,10 @@
-# UTSP Organisasi dan Arsitektur Komputer
+# UTSP KOM206 - Organisasi dan Arsitektur Komputer
 
 ## Ketentuan
-- Tuliskan Nama (@Name :), NIM (@NIM : ) dan No. (@No. :) di bagian atas setiap jawaban code assembly.
-- Peserta `HANYA` diperbolehkan membuka modul praktikum, bukan code" tugas praktikum.
-- Peserta yang melanggar ketentuan, akan diberikan sanksi berupa nilai `0` pada UTSP dan nilai `-20` pada UASP.
+- Tuliskan Nama (@author :), NIM (@nim : ) dan No. (@no :) di bagian atas setiap jawaban code assembly.
+- Peserta `HANYA` diperbolehkan membuka modul praktikum, bukan code" tugas praktikum. `TIDAK DIPERBOLEHKAN` membuka web lain selain Git ini.
+- Modul Praktikum dan Template `main.asm` terdapat di Git ini, Anda hanya perlu men-download zip Git ini. Opsi Download ada di bagian kanan atas.
+- Peserta yang melanggar ketentuan akan diberikan sanksi nilai UTSP `0` dan nilai UASP `-20`.
 
 
 ## Cara Menjawab
@@ -49,6 +50,10 @@ Selanjutnya, Anda buat sendiri ketentuan perpindahan index baris dan kolom sesua
 Bu Arkom sedang menjalani psikotest dan dia dihadapkan pada soal mencari bilangan ke-`n` pada deret `fibonacci`. Untuk memudahkannya
 menjawab, Bu Arkom membuat program pencarian tersebut dengan menggunakan bahasa `assembly`, tapi dia merasa kesulitan.
 Bantulah Bu Arkom membuat program tersebut.
+
+```bash
+Misalkan n = 23 . F(n) = 28657
+```
 
 ## Soal 3
 
