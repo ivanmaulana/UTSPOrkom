@@ -12,6 +12,9 @@
 - Simpan `variabel` jawaban atau hasil sesuai dengan ketentuan tiap soal.
 - Kesalahan penulisan `variabel` akan menyebabkan jawaban anda salah, karena yang akan dicek adalah `variabel` tersebut.
 - Penilaian UTSP berdasarkan hasil perhitungan dari contoh soal dan `test case` lain.
+- Pisahkan setiap soal menjadi folder masing-masing dengan nama folder `task1`, dst.
+- Setelah selesai, compress semua folder tersebut menjadi format `.zip` untuk dikumpulkan di LMS dengan format nama file
+`UTSP-KOM203-waktu praktikum.zip` waktu praktikum : `0800` atau `1300`.
 
 ## Soal 1
 
