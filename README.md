@@ -84,5 +84,5 @@ Data yang tersedia adalah nilai akhir mata dan SKS mata kuliah tersebut yang ter
 
 0 : E < 30
 
-Simpanlah nilai IP Semester Fulan pada variabel `ip` dengan skala `0 - 400` (karena kita belum membahas floating point).
+Simpanlah nilai IP Semester Fulan pada variabel `res` dengan skala `0 - 400` (karena kita belum membahas floating point).
 Yang Disimpan adalah hasil bagi nya saja, sisa bagi diabaikan. Misal `234`.
