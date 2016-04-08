@@ -1,6 +1,6 @@
 ; @author   : Ivan Maulana
-; @nim  : G64130076
-; @no	: 1. matrix determinant
+; @nim      : G64130076
+; @no	    : 1. matrix determinant
 
 SECTION .data
 
