@@ -37,6 +37,8 @@ Untuk mendapatkan alamat memory dari matrix berdasarkan index baris dan kolom, g
 ```bash
 ( ( i * banyak kolom ) + j ) * 4             ; banyak kolom dari matrix 3x3 = 3
 ```
+Misalkan ingin mendapatkan alamat matrix baris 0 kolom 2. Maka ( ( 0 * 3 ) + 2 ) * 4 = 8.
+
 Catatan : ketika mengakses alamat memory, rumus tersebut tidak bisa langsung digunakan ketika mengakses alamat.
 Hitung terlebih dahulu, kemudian baru akses alamat memory nya.
 
