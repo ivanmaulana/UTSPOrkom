@@ -52,7 +52,7 @@ Selanjutnya, Anda buat sendiri ketentuan perpindahan index baris dan kolom sesua
 
 Bu Arkom sedang menjalani psikotest dan dia dihadapkan pada soal mencari bilangan ke-`n` pada deret `fibonacci`. Untuk memudahkannya
 menjawab, Bu Arkom membuat program pencarian tersebut dengan menggunakan bahasa `assembly`, tapi dia merasa kesulitan.
-Bantulah Bu Arkom membuat program tersebut.
+Bantulah Bu Arkom membuat program tersebut. Simpan jawaban bilangan ke-n tersebut di `res`.
 
 ```bash
 Misalkan n = 23 . F(n) = 28657
