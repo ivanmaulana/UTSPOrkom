@@ -1,111 +1,77 @@
-# VoIP Server *Asterisk*
+# UTSP Organisasi dan Arsitektur Komputer
 
-## `VoIP Server Using Asterisk Server -- Running On Ubuntu Server`
+## Ketentuan
+- Tuliskan Nama (@Name :), NIM (@NIM : ) dan No. (@No. :) di bagian atas setiap jawaban code assembly.
+- Peserta `HANYA` diperbolehkan membuka modul praktikum, bukan code" tugas praktikum.
+- Peserta yang melanggar ketentuan, akan diberikan sanksi berupa nilai `0` pada UTSP dan nilai `-20` pada UASP.
 
-## Anggota Kelompok
-- `Ivan Maulana - G64130076`
-- `Andy Eka Saputra - G64130032`
-- `Fahmi Solahudin - G64130095`
-- `Wildan Muhammad - G64130107`
 
-## Sekilas tentang Asterisk
+## Cara Menjawab
+- Buatlah `variabel` sesuai dengan ketentuan tiap soal.
+- Simpan `variabel` jawaban atau hasil sesuai dengan ketentuan tiap soal.
+- Kesalahan penulisan `variabel` akan menyebabkan jawaban anda salah, karena yang akan dicek adalah `variabel` tersebut.
+- Penilaian UTSP berdasarkan hasil perhitungan dari contoh soal dan `test case` lain.
 
-Asterisk adalah implementasi dari sistem telepon Private Branch Exchange (PBX);
-Dengan aplikasi ini, *user* dapat membuat sendiri sistem / server telepon yang dapat saling terhubung
-via Internet Protocol (IP).
-Asterisk juga mampu untuk dikembangkan lebih lanjut menjadi server telepon yang sangat canggih,
-tentunya dengan berbagai tambahan hardware.
+## Soal 1
 
-## Apa saja yang ada di project ini ?
-- `Instalasi` Dapat dilihat di *installation.md*
-- `Konfigurasi` Dapat dilihat di *config.md*
-- `Script Shell` Dapat dilihat di *firstInstall.sh* dan *secondInstall.sh*
-- `Konfigurasi SIP` Dapat dilihat di *sip.conf*
-- `Konfigurasi FUngsi Extensions` Dapat dilihat di *extensions.conf*
-- `Plugin SIP` dapat dilihat di *pjproject-2.4.tar.bz2*
-- `Plugin JSON` dapat dilihat di *jansson.tar.gz*
+Pak Orkom ingin sebuah aplikasi penghitung sebuah determinan dari matrix ` g ` berukuran 3x3, tapi dia ingin proses perhitungan yang sangat cepat.
+Oleh karena itu, dia ingin meminta anda untuk membuatkannya. Dan anda tahu bahwa dengan menggunakan bahasa `assembly`, proses akan
+berlangsung sangat cepat. Bantu Pak Orkom untuk menyelesaikannya.
 
-## Cara Instalasi
+Matrix `g` memiliki indexing yang terdiri dari baris `i` dan kolom `j` yang dimulai dari `0`.
 
-### `Instalasi`
+![alt tag](http://www.cmsc.uwa.edu.au/__data/assets/image/0010/760546/formula-1.gif)
 
-jalankan semua perintah ini dalam keadaan superuser
+Carilah determinan dari matrix g tersebut dan simpan di variabel ` res `
+
+### `Hint`
+
+Opsional, Anda boleh menggunakan algoritme lain.
+
+Untuk mendapatkan alamat memory dari matrix berdasarkan index baris dan kolom, gunakan perhitungan berikut :
 ```bash
-sudo -i
+( ( i * banyak kolom ) + j ) * 4             ; banyak kolom dari matrix 3x3 = 3
+```
+Catatan : ketika mengakses alamat memory, rumus tersebut tidak bisa langsung digunakan ketika mengakses alamat.
+Hitung terlebih dahulu, kemudian baru akses alamat memory nya.
+
+Misal :
+```bash
+mov ebx, [g + eax]           ; eax adalah hasil perhitungan rumus diatas.
 ```
 
-Kemudian masuk ke folder `/usr/src/`
-```bash
-cd /usr/src/
-```
+Selanjutnya, Anda buat sendiri ketentuan perpindahan index baris dan kolom sesuai dengan Sarrus Algorithm.
 
-download file git ini, dengan cara 
-```bash
-git clone http://code.cs.ipb.ac.id/ivanmaulana/asterisk.git
-```
 
-masuk ke folder asterisk
-```bash
-chmod -R 777 asterisk
-cd asterisk
-```
 
-jalankan shell instalasi pertama `firstInstall.sh`
-```bash
-./firstInstall.sh
-```
+## Soal 2
 
-Kemudian PC akan me-restart otomatis, dan jalankan shell instalasi kedua `secondInstall.sh` di folder `/usr/src/asterisk`
-```bash
-./secondInstall.sh
-```
+Bu Arkom sedang menjalani psikotest dan dia dihadapkan pada soal mencari bilangan ke-`n` pada deret `fibonacci`. Untuk memudahkannya
+menjawab, Bu Arkom membuat program pencarian tersebut dengan menggunakan bahasa `assembly`, tapi dia merasa kesulitan.
+Bantulah Bu Arkom membuat program tersebut.
 
-Setelah Instalasi selesai dilakukan, *user* hanya perlu menggunakan akun yang telah dibuat di *softphone* masing-masing
-dan menghubungkannya ke server VoIP.
-Kemudian, masing-masing *user* dapat saling menghubungi satu sama lain.
+## Soal 3
 
-### Contoh Pengaturan Client
+Fulan, seorang mahasiswa penggemar bahasa `assembly`, ingin mengetahui berapakah IP yang ia dapat pada semester ini.
+Semester ini ia mengambil 5 mata kuliah yang memiliki SKS nya masing-masing.
+Data yang tersedia adalah nilai akhir mata dan SKS mata kuliah tersebut yang terdapat pada array `nilai` dan `sks`, seperti berikut :
 
-- Install Aplikasi Softphone. Misalkan untuk pengguna Android : `CSIPSimple`
-- Buka Pengaturan *Account*
-- User : `7001 - 7008`
-- Server : `172.18.88.74:5060`
-- Password : `password`
+`nilai` = {70, 40, 90, 55, 60}
 
-## Spesifikasi 
+`sks` = {3, 2, 4, 2, 3}
 
-- `Version` : Asterisk 13
-- `Encoder` : G.722, G.729, H.263
-- `Transport Protocol` : UDP
-- `Port` : 5060
-- `Communication Protocol` : SIP
 
-## Pembahasan
+*Ketentuan Huruf Mutu dan Skor nya :*
 
-### `Pros`
-- *User* tidak perlu membeli hardware PBX yang sangat mahal + berbagai tambahan alat lain seperti kabel RJ11 dan hardware telepon.
-- Koneksi VoIP tidak membutuhkan koneksi internet, karena menggunakan jaringan local / LAN.
-- Sangat menghemat biaya jika sudah menggunakan berbagai fitur dan fungsi asterisk secara maksimal.
+4 : A >= 75
 
-### `Cons`
-- Kualitas suara telepon masih kurang baik dibanding dengan PABX non VoIP.
-- Diperlukan orang yang ahli untuk instalasi dan maintenance server VoIP.
+3 : 60 =< B < 75
 
-### `Perbandingan dengan project kelompok lain`
+2 : 45 =< C < 60
 
-- Project kelompok kami bukan hanya sekedar aplikasi yang didownload kemudian dihubungkan ke database, tapi lebih dari itu.
-- Project kami sudah mulai banyak digunakan di dunia industri modern saat ini, karena sangat menghemat biaya dan dapat menghubungkan
-perusahaan / organisasi dengan cabang mereka.
-- Banyak contoh dari penggunaan VoIP server, diantaranya voice call Whatsapp, Line, Skype, dll.
-- Asterisk adalah aplikasi open source yang paling banyak digunakan sebagai VoIP Server.
+1 : 30 =< D < 45
 
-## Referensi
-```bash
-http://wiki.freepbx.org/display/FOP/Installing+FreePBX+13+on+Ubuntu+Server+14.04.2+LTS
-```
-```bash
-https://wiki.asterisk.org/wiki/display/AST/Asterisk+13+Documentation
-```
-```bash
-https://www.howtoforge.com/how-to-install-asterisk-for-your-first-pbx-solution
-```
+0 : E < 30
+
+Simpanlah nilai IP Semester Fulan pada variabel `ip` dengan skala `0 - 400` (karena kita belum membahas floating point).
+Yang Disimpan adalah hasil bagi nya saja, sisa bagi diabaikan. Misal `234`.
