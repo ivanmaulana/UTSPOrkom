@@ -4,6 +4,7 @@
 - Tuliskan Nama (@author :), NIM (@nim : ) dan No. (@no :) di bagian atas setiap jawaban code assembly.
 - Peserta `HANYA` diperbolehkan membuka modul praktikum, bukan code" tugas praktikum. `TIDAK DIPERBOLEHKAN` membuka web lain selain Git ini.
 - Modul Praktikum dan Template `main.asm` terdapat di Git ini, Anda hanya perlu men-download zip Git ini. Opsi Download ada di bagian kanan atas.
+- Jika ada pertanyaan, silahkan tanyakan kepada pengawas, bukan kepada teman anda.
 - Peserta yang melanggar ketentuan akan diberikan sanksi nilai UTSP `0` dan nilai UASP `-20`.
 
 
